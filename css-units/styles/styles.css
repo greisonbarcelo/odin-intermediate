@@ -107,7 +107,7 @@ li {
   }
     */
 
-h1 {
+/* h1 {
     font-size: 50px;
 }
 
@@ -122,4 +122,13 @@ p {
 h1 + p {
     font-size: 120%;
 }
-    
+     */
+
+.box {
+height: 250px;
+width: 500px;
+background-image: url(https://mdn.github.io/shared-assets/images/examples/purple-star.png);
+border: 1px solid red;
+background-repeat: no-repeat;
+background-position: center 20px;
+}
