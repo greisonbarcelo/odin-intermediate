@@ -22,7 +22,7 @@
   } */
 
 
-  html {
+  /* html {
     font-size: 24px;
   }
   
@@ -33,4 +33,45 @@
   .rems li {
     font-size: 1.3rem;
   }
-  
+   */
+
+/* .box {
+    background-color: lightblue;
+    border: 5px solid darkblue;
+    padding: 10px;
+    margin: 1em 0;
+}
+.wrapper {
+width: 400px;
+border: 5px solid rebeccapurple;
+}
+
+.px {
+width: 200px;
+}
+
+.percent {
+width: 40%;
+}
+   */
+
+/* 
+li {
+    font-size: 80%;
+} */
+
+.wrapper {
+    background-image: url(https://mdn.github.io/shared-assets/images/examples/balloons.jpg);
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    padding: 20px;
+}
+
+.box {
+    /* margin: 20px auto; */
+    width: 200px;
+    background-color: lightblue;
+    border: 5px solid darkblue;
+    padding: 10px;
+    opacity: 0.6;
+}
