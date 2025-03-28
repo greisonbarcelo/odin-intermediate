@@ -1,4 +1,4 @@
-.box {
+/* .box {
     background-color: lightblue;
     border: 5px solid darkblue;
     padding: 10px;
@@ -19,4 +19,18 @@
   
   .em {
     width: 10em;
+  } */
+
+
+  html {
+    font-size: 24px;
   }
+  
+  .ems li {
+    font-size: 1.3em;
+  }
+  
+  .rems li {
+    font-size: 1.3rem;
+  }
+  
