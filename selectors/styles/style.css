@@ -12,7 +12,7 @@ span {
     font-size: 200%;
 } */
 
-body {
+/* body {
     font: 1.2em / 1.5 sans-serif;
   }
 
@@ -27,4 +27,25 @@ body {
 }
 .alert.go {
     background-color: green;
+} */
+
+a:link {
+    color: orange;
+}
+a:visited {
+    color: green;
+}
+a:hover {
+    text-decoration: none;
+}
+.container p:first-child {
+    font-size: 150%;
+}
+.container p:first-child:first-line {
+    color: red;
+}
+
+table tr:nth-child(even) {
+    background-color: #333;
+    color: #fff
 }
