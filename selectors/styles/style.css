@@ -50,7 +50,7 @@ table tr:nth-child(even) {
     color: #fff
 } */
 
-body {
+/* body {
     font: 1.2em / 1.5 sans-serif;
   }
 
@@ -62,4 +62,10 @@ ul {
   }
 .list > li {
     border-bottom: 1px solid grey;
-}
+} */
+
+a {
+    border: 5px solid grey;
+  }
+  /* Add styles here */
+  
