@@ -63,9 +63,18 @@ ul {
 .list > li {
     border-bottom: 1px solid grey;
 } */
-
+ul {
+    list-style-type: none;
+}
 a {
     border: 5px solid grey;
   }
-  /* Add styles here */
-  
+[title] {
+    border-color: pink;
+}
+[href*="contact"] {
+    border-color: orange;
+}
+[href^="https"] {
+    border-color: green;
+}
