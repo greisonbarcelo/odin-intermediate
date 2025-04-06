@@ -1,0 +1,34 @@
+:root.light {
+    --background-color: white;
+    --font-color: black;
+    --border: 1px solid black;
+    --border-background-color: white;
+}
+:root.dark {
+    --background-color: black;
+    --font-color: white;
+    --border: 1px solid white;
+    --border-background-color: black;
+}
+body, .theme-toggle {
+    color: var(--font-color);
+}
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 10px;
+    background-color: var(--background-color);
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+p {
+    font-size: 1.5rem;
+}
+.theme-toggle {
+    font-family: inherit;
+    border: var(--border);
+    background-color: var(--border-background-color);
+    color: var(--font-color);
+}
