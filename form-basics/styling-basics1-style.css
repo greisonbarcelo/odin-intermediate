@@ -39,7 +39,6 @@ button {
     border-radius: 5px;
     background: none;
     cursor: pointer;
-    transform: rotate(-1.5deg);
   }
 button:hover,
 button:focus {
