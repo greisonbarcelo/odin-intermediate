@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Form validation: Task 1</title>
+    <style>
+      body {
+        background-color: #fff;
+        color: #333;
+        font: 1em / 1.4 Helvetica Neue, Helvetica, Arial, sans-serif;
+        padding: 1em;
+        margin: 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+    form {
+        max-width: 400px; /* Limits form width */
+        margin: auto; /* Centers it */
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-direction: column; /* Stacks items */
+        gap: 10px; /* Adds space */
+    }
+
+
+
+    label {
+        flex: 0 0 150px; /* Fixed width for labels */
+        text-align: right; /* Aligns text */
+    }
+
+    input, textarea {
+        flex: 1; /* Expands to fill space */
+        padding: 5px;
+    }
+
+
+    li {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    button {
+        padding: 8px 15px;
+    }
+
+    li:last-child {
+        display: flex;
+        justify-content: center; /* Centers the button */
+    }
+    h2 {
+        text-align: center;
+    }
+    input:valid {
+      background-color: greenyellow;
+    }
+    input:invalid {
+      background-color: lightcoral;
+    }
+    </style>
+  </head>
+
+  <body>
+    <form>
+      <h2>Enter your support query</h2>
+      <ul>
+        <li>
+          <label for="uname">User name:</label>
+          <input type="text" name="uname" id="uname" required minlength="5" maxlength="20">
+        </li>
+        <li>
+          <label for="email">Email address:</label>
+          <input type="email" name="email" id="email" required>
+        </li>
+        <li>
+          <label for="phone">Phone number:</label>
+          <input type="tel" name="phone" id="phone" required maxlength="11">
+        </li>
+        <li>
+          <label for="comment">Comment:</label>
+          <textarea name="comment" id="comment" maxlength="200"></textarea>
+        </li>
+        <li>
+          <button>Submit comment</button>
+        </li>
+      </ul>
+    </form>
+
+    <script>
+        let username = document.querySelector("#email");
+        let email = document.querySelector("#email");
+        let phone = document.querySelector("#phone");
+
+        let usernameRegExp =
+        /^[a-z]\.[a-z0-9-]{3,}$/;
+        const emailRegExp =
+        /^[a-zA-Z0-9]+@bigcorp\.eu$/;
+        const phoneRegExp = 
+        /^(\d{10}|\d{3}[-.\s]\d{3}[-.\s]\d{4})$/;
+
+
+        
+    </script>
+
+  </body>
+
+</html>
