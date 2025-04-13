@@ -81,7 +81,7 @@
         </li>
         <li>
           <label for="phone">Phone number:</label>
-          <input type="tel" name="phone" id="phone" required maxlength="11">
+          <input type="tel" name="phone" id="phone" required minlength="10" maxlength="10">
         </li>
         <li>
           <label for="comment">Comment:</label>
@@ -94,19 +94,50 @@
     </form>
 
     <script>
-        let username = document.querySelector("#email");
-        let email = document.querySelector("#email");
-        let phone = document.querySelector("#phone");
+document.addEventListener("DOMContentLoaded", function() {
+    let username = document.querySelector("#uname");
+    let email = document.querySelector("#email");
+    let phone = document.querySelector("#phone");
 
-        let usernameRegExp =
-        /^[a-z]\.[a-z0-9-]{3,}$/;
-        const emailRegExp =
-        /^[a-zA-Z0-9]+@bigcorp\.eu$/;
-        const phoneRegExp = 
-        /^(\d{10}|\d{3}[-.\s]\d{3}[-.\s]\d{4})$/;
+    let usernameRegExp = /^[a-z]\.[a-z0-9-]{3,}$/;
+    let emailRegExp = /^[a-zA-Z0-9]+@bigcorp\.eu$/;
+    let phoneRegExp = /^(\d{10}|\d{3}[-.\s]\d{3}[-.\s]\d{4})$/;
+
+    function validateInput(input, regex, errorMessage) {
+        if (!regex.test(input.value)) {
+            input.style.backgroundColor = "lightcoral"; // Invalid input
+            input.setCustomValidity(errorMessage);
+        } else {
+            input.style.backgroundColor = "greenyellow"; // Valid input
+            input.setCustomValidity("");
+        }
+    }
+
+    // Validate inputs on blur (when user finishes typing)
+    username.addEventListener("blur", function() {
+        validateInput(username, usernameRegExp, "Format: a.abc123 (lowercase, dot, 3+ characters after dot)");
+    });
+
+    email.addEventListener("blur", function() {
+        validateInput(email, emailRegExp, "Must be an email with '@bigcorp.eu' domain.");
+    });
+
+    phone.addEventListener("blur", function() {
+        validateInput(phone, phoneRegExp, "Enter 10 digits in a row or formatted like 123-456-7890.");
+    });
+
+    // Prevent form submission if invalid
+    document.querySelector("form").addEventListener("submit", function(event) {
+        if (!usernameRegExp.test(username.value) || 
+            !emailRegExp.test(email.value) || 
+            !phoneRegExp.test(phone.value)) {
+            alert("Please correct the invalid fields before submitting.");
+            event.preventDefault();
+        }
+        });
+    });
 
 
-        
     </script>
 
   </body>
