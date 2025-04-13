@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Form validation: Task 1</title>
+    <style>
+      body {
+        background-color: #fff;
+        color: #333;
+        font: 1em / 1.4 Helvetica Neue, Helvetica, Arial, sans-serif;
+        padding: 1em;
+        margin: 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+    form {
+        max-width: 400px; /* Limits form width */
+        margin: auto; /* Centers it */
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-direction: column; /* Stacks items */
+        gap: 10px; /* Adds space */
+    }
+
+
+
+    label {
+        flex: 0 0 150px; /* Fixed width for labels */
+        text-align: right; /* Aligns text */
+    }
+
+    input, textarea {
+        flex: 1; /* Expands to fill space */
+        padding: 5px;
+    }
+
+
+    li {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    button {
+        padding: 8px 15px;
+    }
+
+    li:last-child {
+        display: flex;
+        justify-content: center; /* Centers the button */
+    }
+    h2 {
+        text-align: center;
+    }
+    </style>
+  </head>
+
+  <body>
+    <form>
+      <h2>Enter your support query</h2>
+      <ul>
+        <li>
+          <label for="uname">User name:</label>
+          <input type="text" name="uname" id="uname" required>
+        </li>
+        <li>
+          <label for="email">Email address:</label>
+          <input type="text" name="email" id="email" required>
+        </li>
+        <li>
+          <label for="phone">Phone number:</label>
+          <input type="text" name="phone" id="phone" required>
+        </li>
+        <li>
+          <label for="comment">Comment:</label>
+          <textarea name="comment" id="comment">
+          </textarea>
+        </li>
+        <li>
+          <button>Submit comment</button>
+        </li>
+      </ul>
+    </form>
+  </body>
+
+</html>
